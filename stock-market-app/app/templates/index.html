@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Market Data</title>
     <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
+    <!--Added link to CSS file in style-->
+    <link rel= "stylesheet" type= "text/css" href= "{{url_for('static',filename='styles/styles.css')}}"> 
 </head>
 <body>
     <h1>Stock Market Data</h1>
@@ -20,7 +22,9 @@
     <div>
         {% if stock_data %}
             <h2>{{ stock_code }} Candlestick Chart</h2>
+            <div id="candlestick_chart">
             {{ stock_data | safe }}  <!-- Embeds the Plotly chart -->
+            </div>
         {% else %}
             <p>No data available for this stock code.</p>
         {% endif %}

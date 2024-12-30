@@ -1,0 +1,17 @@
+html{
+ height:100%;
+ width:100%;
+}
+
+body{
+ background-color:aliceblue;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+  }
+
+#candlestick_chart{
+ margin-left: 25px;
+ margin-right: 25px;
+}

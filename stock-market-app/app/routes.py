@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request
 from app.services.stock_service import get_stock_data  # Ensure this function is in stock_service.py
 
-bp = Blueprint('main', __name__)
+bp = Blueprint('main', __name__, static_folder='static')
 
 @bp.route("/", methods=["GET", "POST"])
 def index():
