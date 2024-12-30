@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
+</head>
+<body>
+    <h1>Stock Market Data</h1>
+
+    <!-- Form to input stock code -->
+    <form method="POST">
+        <label for="stock_code">Enter Stock Symbol (e.g., AAPL):</label>
+        <input type="text" id="stock_code" name="stock_code" value="{{ stock_code }}" required>
+        <button type="submit">Get Data</button>
+    </form>
+
+    <!-- Display the candlestick chart -->
+    <div>
+        {% if stock_data %}
+            <h2>{{ stock_code }} Candlestick Chart</h2>
+            {{ stock_data | safe }}  <!-- Embeds the Plotly chart -->
+        {% else %}
+            <p>No data available for this stock code.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
