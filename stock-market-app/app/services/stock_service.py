@@ -67,7 +67,7 @@ def get_stock_data(stock_code):
         title=f'{stock_code} - Candlestick Chart',
         xaxis_title='Date',
         yaxis_title='Price (USD)',
-        xaxis_rangeslider_visible=False  # Hides range slider
+        xaxis_rangeslider_visible=True  # Hides range slider
     )
 
     # Return the Plotly chart HTML div
