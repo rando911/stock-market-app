@@ -1,3 +1,121 @@
+/* General HTML and Body Styling */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; /* Clean, professional font */
+  background-color: aliceblue; /* Soft background color */
+}
+
+/* Page Header Styling */
+h1 {
+  text-align: center;
+  padding-left:25px;
+  color: #333;
+  font-size: 2.5em;
+  margin-top: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-left:25px;
+  margin-right:0;*/
+
+}
+
+form label {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+form input[type="text"]:focus {
+  border: 3px solid #0077cc;
+  outline: none;
+  transition: 0.3s;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #005fa3;
+}
+
+h2{
+  padding-left:25px;
+}
+
+/* Candlestick Chart Styling */
+#candlestick_chart {
+  margin: 25px auto;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+}
+
+/* Message Styling */
+p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+      width: 90%;
+  }
+
+  #candlestick_chart {
+      width: 95%;
+  }
+
+  table {
+      width: 95%;
+  }
+}
+
+
+/*   
+****OLD CSS****
+
 html{
  height:100%;
  width:100%;
@@ -15,3 +133,5 @@ input[type=text]:focus {
  margin-left: 25px;
  margin-right: 25px;
 }
+
+*/
